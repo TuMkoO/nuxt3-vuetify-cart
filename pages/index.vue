@@ -95,7 +95,9 @@
 
 <script setup>
 import data from "../data";
+import { useCartStore } from "../stores/cart";
 
+const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
 </script>
