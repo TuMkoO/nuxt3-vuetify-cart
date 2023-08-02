@@ -92,8 +92,27 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useCartStore } from "../stores/cart";
 
 const cartStore = useCartStore();
+
+// definePageMeta({
+//   title: "Cart Page",
+// });
+
+// const route = useRoute();
+
+useHead({
+  // title: `${route.meta.title}`,
+  title: "Cart",
+  // meta: [{ property: "og:title", content: `App Name - ${route.meta.title}` }],
+  meta: [
+    { name: "description", content: "Cart page" },
+    { property: "og:type", content: "article" },
+    { property: "og:title", content: `App Name Cart page` },
+    { property: "og:description", content: `App Name Cart page` },
+    { property: "og:url", content: `https://...` },
+  ],
+});
 </script>

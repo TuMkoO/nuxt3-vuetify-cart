@@ -93,11 +93,30 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import data from "../data";
 import { useCartStore } from "../stores/cart";
 
 const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
+
+// definePageMeta({
+//   title: "Shop",
+// });
+
+// const route = useRoute();
+
+useHead({
+  // title: `${route.meta.title}`,
+  title: "Home",
+  // meta: [{ property: "og:title", content: `App Name - ${route.meta.title}` }],
+  meta: [
+    { name: "description", content: "Index page" },
+    { property: "og:type", content: "article" },
+    { property: "og:title", content: `App Name Index page` },
+    { property: "og:description", content: `App Name Index page` },
+    { property: "og:url", content: `https://...` },
+  ],
+});
 </script>

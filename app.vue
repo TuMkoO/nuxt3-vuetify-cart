@@ -3,12 +3,21 @@
     <Header />
     <v-main>
       <v-container>
-        <RouterView />
+        <NuxtLayout> <RouterView /> </NuxtLayout>
       </v-container>
     </v-main>
   </v-app>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useCartStore } from "./stores/cart";
+
+useHead({
+  // title: "My App",
+  titleTemplate: "%s - Site Title",
+  meta: [{ name: "description", content: "My amazing site." }],
+  bodyAttrs: {
+    class: "test",
+  },
+});
 </script>
