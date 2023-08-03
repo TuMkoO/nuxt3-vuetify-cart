@@ -1,11 +1,8 @@
 <template>
   <v-app id="inspire" :theme="useCartStore().getTheme">
-    <Header />
-    <v-main>
-      <v-container>
-        <NuxtLayout> <RouterView /> </NuxtLayout>
-      </v-container>
-    </v-main>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </v-app>
 </template>
 

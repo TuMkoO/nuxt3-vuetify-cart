@@ -97,9 +97,10 @@ import { useCartStore } from "../stores/cart";
 
 const cartStore = useCartStore();
 
-// definePageMeta({
-//   title: "Cart Page",
-// });
+definePageMeta({
+  //   title: "Cart Page",
+  layout: "default",
+});
 
 // const route = useRoute();
 

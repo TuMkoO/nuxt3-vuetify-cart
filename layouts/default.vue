@@ -1,15 +1,13 @@
 <template>
   <div>
-    Use Default layout
-    <slot />
+    <Header />
+    <v-main>
+      <v-container>
+        Use Default layout
+        <slot />
+      </v-container>
+    </v-main>
   </div>
 </template>
 
-<script setup lang="ts">
-// const route = useRoute();
-
-// useHead({
-//   title: `${route.meta.title}`,
-//   meta: [{ property: "og:title", content: `App Name - ${route.meta.title}` }],
-// });
-</script>
+<script setup lang="ts"></script>

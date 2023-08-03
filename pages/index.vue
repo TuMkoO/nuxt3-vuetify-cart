@@ -101,9 +101,10 @@ const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
 
-// definePageMeta({
-//   title: "Shop",
-// });
+definePageMeta({
+  //   title: "Shop",
+  layout: "default",
+});
 
 // const route = useRoute();
 
