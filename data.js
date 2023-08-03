@@ -2,6 +2,12 @@ const products = [
   {
     id: "recZkNf2kwmdBcqd0",
     name: "accent chair",
+    brand: "Nuke",
+    color: "white",
+    type: "mobile",
+    designed: ["home", "work", "office", "school", "street", "underground"],
+    rating: 4.5,
+    reviews_amount: 18,
     price: 25,
     image: "https://loremflickr.com/640/360/product?random=1",
     description:
@@ -10,6 +16,12 @@ const products = [
   {
     id: "recEHmzvupvT8ZONH",
     name: "albany sectional",
+    brand: "Abibas",
+    color: "green",
+    type: "web",
+    designed: ["home", "office", "underground"],
+    rating: 5,
+    reviews_amount: 11,
     price: 109,
     image: "https://loremflickr.com/640/360/product?random=2",
     description:
@@ -18,6 +30,12 @@ const products = [
   {
     id: "rec5NBwZ5zCD9nfF0",
     name: "albany table",
+    brand: "Lobitek",
+    color: "black",
+    type: "portable",
+    designed: ["work", "office", "school"],
+    rating: 3.9,
+    reviews_amount: 22,
     price: 309,
     image: "https://loremflickr.com/640/360/product?random=3",
     description:
@@ -26,6 +44,12 @@ const products = [
   {
     id: "recd1jIVIEChmiwhe",
     name: "armchair",
+    brand: "Pineapple",
+    color: "orange",
+    type: "mobile",
+    designed: ["home", "work", "office"],
+    rating: 4.6,
+    reviews_amount: 55,
     price: 125,
     image: "https://loremflickr.com/640/360/product?random=4",
     description:
@@ -34,6 +58,12 @@ const products = [
   {
     id: "recoM2MyHJGHLVi5l",
     name: "bar stool",
+    brand: "Uvidia",
+    color: "white",
+    type: "desktop",
+    designed: ["home", "work", "office", "games"],
+    rating: 2.5,
+    reviews_amount: 8,
     price: 40,
     image: "https://loremflickr.com/640/360/product?random=5",
     description:
@@ -42,6 +72,12 @@ const products = [
   {
     id: "recotY5NhDQFdkm",
     name: "dining table",
+    brand: "Wetel",
+    color: "grey",
+    type: "desktop",
+    designed: ["home", "work", "office", "school"],
+    rating: 2.5,
+    reviews_amount: 34,
     price: 42,
     image: "https://loremflickr.com/640/360/product?random=6",
     description:
@@ -50,6 +86,12 @@ const products = [
   {
     id: "rec1Ntk7siEEW9ha1",
     name: "emperor bed",
+    brand: "Gnusmas",
+    color: "green",
+    type: "sport",
+    designed: ["street", "underground"],
+    rating: 3.1,
+    reviews_amount: 15,
     price: 23,
     image: "https://loremflickr.com/640/360/product?random=7",
     description:
@@ -58,6 +100,12 @@ const products = [
   {
     id: "recNZ0koOqEmilmoz",
     name: "entertainment center",
+    brand: "Nuke",
+    color: "black",
+    type: "mobile",
+    designed: ["street", "underground"],
+    rating: 1.5,
+    reviews_amount: 48,
     price: 59,
     image: "https://loremflickr.com/640/360/product?random=8",
     description:
@@ -66,6 +114,12 @@ const products = [
   {
     id: "recrfxv3EwpvJwvjq",
     name: "high-back bench",
+    brand: "Wetel",
+    color: "green",
+    type: "sport",
+    designed: ["school", "street"],
+    rating: 3.8,
+    reviews_amount: 17,
     price: 39,
     image: "https://loremflickr.com/640/360/product?random=9",
     description:
@@ -74,6 +128,12 @@ const products = [
   {
     id: "recoW8ecgjtKx2Sj2",
     name: "leather chair",
+    brand: "Nuke",
+    color: "black",
+    type: "sport",
+    designed: ["home", "work", "street", "underground"],
+    rating: 4.1,
+    reviews_amount: 25,
     price: 2,
     image: "https://loremflickr.com/640/360/product?random=10",
     description:
@@ -82,6 +142,12 @@ const products = [
   {
     id: "recEOA6qtDag1hRbU",
     name: "leather sofa",
+    brand: "Abibas",
+    color: "red",
+    type: "desktop",
+    designed: ["office"],
+    rating: 2.1,
+    reviews_amount: 6,
     price: 99,
     image: "https://loremflickr.com/640/360/product?random=11",
     description:
@@ -90,6 +156,12 @@ const products = [
   {
     id: "recoAJYUCuEKxcPSr",
     name: "modern bookshelf",
+    brand: "Lobitek",
+    color: "grey",
+    type: "desktop",
+    designed: ["work", "office", "school"],
+    rating: 5,
+    reviews_amount: 65,
     price: 31,
     image: "https://loremflickr.com/640/360/product?random=12",
     description:
@@ -98,6 +170,12 @@ const products = [
   {
     id: "recQ0fMd8T0Vk211E",
     name: "modern poster",
+    brand: "Lobitek",
+    color: "blue",
+    type: "sport",
+    designed: ["work", "office", "underground"],
+    rating: 2.2,
+    reviews_amount: 31,
     price: 30,
     image: "https://loremflickr.com/640/360/product?random=13",
     description:
@@ -106,6 +184,12 @@ const products = [
   {
     id: "rec7CjDWKRgNQtrKe",
     name: "shelf",
+    brand: "Uvidia",
+    color: "blue",
+    type: "portable",
+    designed: ["work", "office", "school", "games"],
+    rating: 4.9,
+    reviews_amount: 32,
     price: 30,
     image: "https://loremflickr.com/640/360/product?random=14",
     description:
@@ -114,6 +198,12 @@ const products = [
   {
     id: "recF0KpwlkF7e8kXO",
     name: "simple chair",
+    brand: "Uvidia",
+    color: "pink",
+    type: "sport",
+    designed: ["school", "street", "underground"],
+    rating: 4,
+    reviews_amount: 12,
     price: 109,
     image: "https://loremflickr.com/640/360/product?random=15",
     description:
@@ -122,6 +212,12 @@ const products = [
   {
     id: "recs5BSVU3qQrOj4E",
     name: "sofa set",
+    brand: "Abibas",
+    color: "white",
+    type: "sport",
+    designed: ["street", "underground"],
+    rating: 3.9,
+    reviews_amount: 27,
     price: 129,
     image: "https://loremflickr.com/640/360/product?random=16",
     description:
@@ -130,6 +226,12 @@ const products = [
   {
     id: "recroK1VD8qVdMP5H",
     name: "suede armchair",
+    brand: "Nuke",
+    color: "blue",
+    type: "mobile",
+    designed: ["work", "office"],
+    rating: 4.3,
+    reviews_amount: 14,
     price: 15,
     image: "https://loremflickr.com/640/360/product?random=17",
     description:
@@ -138,6 +240,12 @@ const products = [
   {
     id: "rec7JInsuCEHgmaGe",
     name: "utopia sofa",
+    brand: "Dust",
+    color: "orange",
+    type: "desktop",
+    designed: ["work", "office", "underground"],
+    rating: 3,
+    reviews_amount: 11,
     price: 79,
     image: "https://loremflickr.com/640/360/product?random=18",
     description:
@@ -146,6 +254,12 @@ const products = [
   {
     id: "rec3jeKnhInKHJuz2",
     name: "vase table",
+    brand: "Pineapple",
+    color: "yellow",
+    type: "web",
+    designed: ["school", "street", "underground"],
+    rating: 2.2,
+    reviews_amount: 19,
     price: 120,
     image: "https://loremflickr.com/640/360/product?random=19",
     description:
@@ -154,6 +268,12 @@ const products = [
   {
     id: "recv2ohxljlK2FZO7",
     name: "wooden bed",
+    brand: "Pineapple",
+    color: "white",
+    type: "portable",
+    designed: ["home", "work", "office", "school", "street", "underground"],
+    rating: 1.5,
+    reviews_amount: 7,
     price: 25,
     image: "https://loremflickr.com/640/360/product?random=20",
     description:
@@ -162,6 +282,12 @@ const products = [
   {
     id: "recm7wC8TBVdU9oEL",
     name: "wooden desk",
+    brand: "WV",
+    color: "white",
+    type: "sport",
+    designed: ["work", "street", "underground"],
+    rating: 5,
+    reviews_amount: 54,
     price: 4,
     image: "https://loremflickr.com/640/360/product?random=21",
     description:
@@ -170,6 +296,12 @@ const products = [
   {
     id: "rectfNsySwAJeWDN2",
     name: "wooden table",
+    brand: "WV",
+    color: "blue",
+    type: "web",
+    designed: ["office", "school", "underground"],
+    rating: 1.5,
+    reviews_amount: 17,
     price: 234,
     image: "https://loremflickr.com/640/360/product?random=22",
     description:

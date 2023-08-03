@@ -15,7 +15,8 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12">
+      <v-col cols="2"> 123 </v-col>
+      <v-col>
         <v-row v-show="grid">
           <v-col
             v-for="(product, i) in products"
