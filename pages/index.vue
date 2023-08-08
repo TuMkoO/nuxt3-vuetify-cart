@@ -15,7 +15,9 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="2"> 123 </v-col>
+      <v-col cols="4" xl="2">
+        <Filter />
+      </v-col>
       <v-col>
         <v-row v-show="grid">
           <v-col
