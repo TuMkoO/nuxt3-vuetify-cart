@@ -10,12 +10,17 @@
       </v-badge>
     </v-btn>
     <v-btn
+      class="d-none d-md-flex"
       :prepend-icon="
         cartStore.theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'
       "
       @click="cartStore.toggleTheme"
     >
       Toggle Theme
+    </v-btn>
+    <v-btn class="d-md-none" @click="cartStore.toggleTheme">
+      <v-icon v-if="cartStore.theme === 'light'"> mdi-weather-sunny </v-icon>
+      <v-icon v-else> mdi-weather-night </v-icon>
     </v-btn>
   </v-app-bar>
 </template>
