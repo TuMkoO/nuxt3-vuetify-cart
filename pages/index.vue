@@ -1,24 +1,51 @@
 <template>
   <div>
-    <v-row class="my-5">
+    <v-row>
       <v-col cols="12">
-        <v-btn
-          @click="grid = true"
-          :class="{ 'bg-primary': grid }"
-          class="mr-3"
-        >
-          <v-icon> mdi-apps </v-icon>
-        </v-btn>
-        <v-btn @click="grid = false" :class="{ 'bg-primary': !grid }">
-          <v-icon> mdi-view-list </v-icon>
-        </v-btn>
+        <v-navigation-drawer v-model="drawer" width="400" temporary>
+          <div class="px-3 py-3">
+            <div class="d-flex justify-end">
+              <v-btn
+                icon="mdi-close"
+                elevation="0"
+                @click.stop="drawer = !drawer"
+              >
+                <v-icon> mdi-close </v-icon>
+              </v-btn>
+            </div>
+            <Filter />
+          </div>
+        </v-navigation-drawer>
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="4" xl="2">
+      <v-col cols="4" lg="3" xl="2" class="d-none d-md-block">
         <Filter />
       </v-col>
       <v-col>
+        <v-row>
+          <v-col cols="12">
+            <div class="d-flex justify-space-between">
+              <div>
+                <v-btn
+                  @click="grid = true"
+                  :class="{ 'bg-primary': grid }"
+                  class="mr-3"
+                >
+                  <v-icon> mdi-apps </v-icon>
+                </v-btn>
+                <v-btn @click="grid = false" :class="{ 'bg-primary': !grid }">
+                  <v-icon> mdi-view-list </v-icon>
+                </v-btn>
+              </div>
+              <div class="d-block d-md-none">
+                <v-btn @click.stop="drawer = !drawer">
+                  <v-icon> mdi-tune </v-icon>
+                </v-btn>
+              </div>
+            </div>
+          </v-col>
+        </v-row>
         <v-row v-show="grid">
           <v-col
             v-for="(product, i) in products"
@@ -43,9 +70,9 @@
                 </template>
               </v-img>
 
-              <v-card-title class="text-capitalize">{{
-                product.name
-              }}</v-card-title>
+              <v-card-title class="text-capitalize">
+                {{ product.name }}
+              </v-card-title>
 
               <v-card-subtitle>${{ product.price }}</v-card-subtitle>
 
@@ -103,6 +130,16 @@ import { useCartStore } from "../stores/cart";
 const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
+
+const drawer = ref(false);
+
+watch(drawer, (newVal) => {
+  if (newVal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+});
 
 definePageMeta({
   //   title: "Shop",
