@@ -3,7 +3,7 @@
     <v-toolbar-title @click="$router.push('/')" style="cursor: pointer"
       >Shopping Website</v-toolbar-title
     >
-    <v-spacer></v-spacer>
+    <v-spacer class="d-none d-sm-block"></v-spacer>
     <v-btn @click="$router.push('/cart')" class="text-none" stacked>
       <v-badge :content="cartStore.productsTotal" color="error">
         <v-icon>mdi-cart-outline</v-icon>
