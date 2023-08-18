@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div v-resize="onResize">
     <v-row>
       <v-col cols="12">
-        <v-navigation-drawer v-model="drawer" width="400" temporary>
+        <v-navigation-drawer v-model="drawer" width="420" temporary>
           <div class="px-3 py-3">
             <div class="d-flex justify-end">
               <v-btn
@@ -13,14 +13,18 @@
                 <v-icon> mdi-close </v-icon>
               </v-btn>
             </div>
-            <Filter v-model="filterValues" :fields="filterFields" />
+            <div id="mobile-filter"></div>
           </div>
         </v-navigation-drawer>
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="4" lg="3" xl="2" class="d-none d-md-block">
-        <Filter v-model="filterValues" :fields="filterFields" />
+        <ClientOnly>
+          <Teleport to="#mobile-filter" :disabled="teleportFilter">
+            <Filter v-model="filterValues" :fields="filterFields" />
+          </Teleport>
+        </ClientOnly>
       </v-col>
       <v-col>
         <v-row>
@@ -180,6 +184,7 @@ const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
 const drawer = ref(false);
+const teleportFilter = ref(false);
 const filterValues = ref<IFilterValues>({} as IFilterValues);
 const filterFields = computed(() => {
   return {
@@ -260,6 +265,12 @@ function generateMaxNum(field: string) {
   });
 
   return Math.max(...newArr);
+}
+
+function onResize() {
+  window.innerWidth < 960
+    ? (teleportFilter.value = false)
+    : (teleportFilter.value = true);
 }
 
 watch(drawer, (newVal) => {
