@@ -18,7 +18,12 @@
                       alt=""
                       style="width: 90px; height: 90px; object-fit: cover"
                     />
-                    <h3 class="text-capitalize ml-3">{{ item.name }}</h3>
+                    <NuxtLink
+                      :to="'/products/' + item.id"
+                      class="text-subtitle-1 font-weight-bold text-grey-darken-3 text-decoration-none text-capitalize ml-3"
+                    >
+                      {{ item.name }}
+                    </NuxtLink>
                   </div>
                 </v-col>
                 <v-col sm="8">
