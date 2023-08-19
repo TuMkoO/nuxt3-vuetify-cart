@@ -100,7 +100,9 @@
               </div>
 
               <v-card-actions>
-                <v-btn color="primary">Read more</v-btn>
+                <v-btn color="primary" :to="'/products/' + product.id"
+                  >Read more</v-btn
+                >
                 <v-spacer></v-spacer>
                 <v-btn class="bg-primary" @click="cartStore.add(product.id)"
                   >Add to cart</v-btn
@@ -158,7 +160,9 @@
 
             <div class="d-flex justify-end">
               <v-card-actions>
-                <v-btn color="primary"> Read More </v-btn>
+                <v-btn color="primary" :to="'/products/' + product.id">
+                  Read More
+                </v-btn>
                 <v-btn
                   class="ml-2 bg-primary"
                   @click="cartStore.add(product.id)"
