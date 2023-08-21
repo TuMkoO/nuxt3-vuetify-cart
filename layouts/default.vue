@@ -3,7 +3,6 @@
     <Header />
     <v-main>
       <v-container>
-        Use Default layout
         <slot />
       </v-container>
     </v-main>
