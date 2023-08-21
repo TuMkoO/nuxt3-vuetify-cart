@@ -59,21 +59,22 @@
             sm="6"
           >
             <v-card class="mx-auto pb-2">
-              <v-img :src="product.image" height="200px" cover>
-                <template v-slot:placeholder>
-                  <v-row
-                    align="center"
-                    class="fill-height ma-0"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      color="grey lighten-5"
-                      indeterminate
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-
+              <NuxtLink :to="'/products/' + product.id">
+                <v-img :src="product.image" height="200px" cover>
+                  <template v-slot:placeholder>
+                    <v-row
+                      align="center"
+                      class="fill-height ma-0"
+                      justify="center"
+                    >
+                      <v-progress-circular
+                        color="grey lighten-5"
+                        indeterminate
+                      ></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
+              </NuxtLink>
               <div class="px-4 mt-2">{{ product.brand }}</div>
 
               <v-card-title class="text-capitalize pt-0">
@@ -118,16 +119,22 @@
           class="mb-2"
         >
           <v-col cols="12" sm="6" md="4">
-            <v-img :src="product.image" height="200px" cover>
-              <template v-slot:placeholder>
-                <v-row align="center" class="fill-height ma-0" justify="center">
-                  <v-progress-circular
-                    color="grey lighten-5"
-                    indeterminate
-                  ></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
+            <NuxtLink :to="'/products/' + product.id">
+              <v-img :src="product.image" height="200px" cover>
+                <template v-slot:placeholder>
+                  <v-row
+                    align="center"
+                    class="fill-height ma-0"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      color="grey lighten-5"
+                      indeterminate
+                    ></v-progress-circular>
+                  </v-row>
+                </template>
+              </v-img>
+            </NuxtLink>
           </v-col>
           <v-col cols="12" md="8">
             <div class="px-4">{{ product.brand }}</div>
@@ -147,6 +154,10 @@
             <v-card-text>
               {{ product.description }}
             </v-card-text>
+
+            <div class="px-4 mb-2 text-subtitle-2 text-medium-emphasis">
+              Отзывы: {{ product.reviews_amount }}
+            </div>
 
             <div class="px-2">
               <v-chip
