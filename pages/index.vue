@@ -207,6 +207,20 @@ import { useCartStore } from "../stores/cart";
 import type { IFilterValues } from "@/types/IFilterValues";
 import type { IFilterFields } from "@/types/IFilterFields";
 
+interface IProduct {
+  id: string;
+  name: string;
+  brand: string;
+  color: string;
+  description: string;
+  type: string;
+  image: string;
+  designed: string[];
+  reviews_amount: number;
+  rating: number;
+  price: number;
+}
+
 const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
@@ -273,7 +287,7 @@ const filteredProducts = computed(() => {
 function generateUniqueField(field: string) {
   const newArr: Array<string> = [];
 
-  products.value.forEach((item) => {
+  products.value.forEach((item: any) => {
     if (Array.isArray(item[field])) {
       newArr.push(...item[field]);
     } else {
@@ -287,7 +301,7 @@ function generateUniqueField(field: string) {
 function generateMaxNum(field: string) {
   const newArr: Array<number> = [];
 
-  products.value.forEach((item) => {
+  products.value.forEach((item: any) => {
     newArr.push(item[field]);
   });
 
