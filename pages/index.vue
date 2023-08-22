@@ -207,20 +207,6 @@ import { useCartStore } from "../stores/cart";
 import type { IFilterValues } from "@/types/IFilterValues";
 import type { IFilterFields } from "@/types/IFilterFields";
 
-interface IProduct {
-  id: string;
-  name: string;
-  brand: string;
-  color: string;
-  description: string;
-  type: string;
-  image: string;
-  designed: string[];
-  reviews_amount: number;
-  rating: number;
-  price: number;
-}
-
 const cartStore = useCartStore();
 const products = ref(data);
 const grid = ref(true);
