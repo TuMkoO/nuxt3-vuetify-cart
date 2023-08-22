@@ -298,6 +298,8 @@ function onResize() {
   window.innerWidth < 960
     ? (teleportFilter.value = false)
     : (teleportFilter.value = true);
+
+  if (drawer.value === true && window.innerWidth >= 960) drawer.value = false;
 }
 
 watch(drawer, (newVal) => {
@@ -309,16 +311,11 @@ watch(drawer, (newVal) => {
 });
 
 definePageMeta({
-  //   title: "Shop",
   layout: "default",
 });
 
-// const route = useRoute();
-
 useHead({
-  // title: `${route.meta.title}`,
   title: "Home",
-  // meta: [{ property: "og:title", content: `App Name - ${route.meta.title}` }],
   meta: [
     { name: "description", content: "Index page" },
     { property: "og:type", content: "article" },
