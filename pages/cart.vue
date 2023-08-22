@@ -1,8 +1,8 @@
 <template>
   <div class="py-6">
     <v-row :class="{ 'justify-center': !cartStore.formattedCart.length }">
-      <v-col :md="cartStore.formattedCart.length ? 8 : 6">
-        <v-card class="py-5 px-4">
+      <v-col cols="12" :md="cartStore.formattedCart.length ? 8 : 6">
+        <v-card class="py-2 py-sm-5 px-0 px-sm-4">
           <v-card-title>My Cart</v-card-title>
           <v-card-text v-if="cartStore.formattedCart.length">
             <div
@@ -11,7 +11,7 @@
               class="mb-3"
             >
               <v-row>
-                <v-col sm="4">
+                <v-col cols="12" sm="4">
                   <div class="d-flex align-center no-wrap">
                     <img
                       :src="item.image"
@@ -26,7 +26,7 @@
                     </NuxtLink>
                   </div>
                 </v-col>
-                <v-col sm="8">
+                <v-col cols="12" sm="8">
                   <div
                     class="d-flex justify-space-between align-center no-wrap w-full h-100"
                   >
@@ -49,7 +49,7 @@
                         <v-icon>mdi-minus</v-icon>
                       </span>
                     </div>
-                    <p>
+                    <p class="mx-1">
                       {{ item.quantity }} X {{ item.price }} =
                       <strong>{{ item.cost }}</strong>
                     </p>
@@ -69,7 +69,7 @@
         </v-card>
       </v-col>
       <v-col v-if="cartStore.total" md="4">
-        <v-card class="py-5 px-4">
+        <v-card class="py-2 py-sm-5 px-0 px-sm-4">
           <v-card-title class="mb-5">Order Summary</v-card-title>
           <v-card-text>
             <div class="d-flex align-center justify-space-between mb-4">

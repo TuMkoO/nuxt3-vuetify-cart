@@ -19,7 +19,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="4" lg="3" xl="2" class="d-none d-md-block">
+      <v-col cols="4" lg="3" xl="2" class="d-none d-md-block mt-8">
         <ClientOnly>
           <Teleport to="#mobile-filter" :disabled="teleportFilter">
             <Filter v-model="filterValues" :fields="filterFields" />
@@ -51,6 +51,11 @@
           </v-col>
         </v-row>
         <v-row v-show="grid">
+          <v-col cols="12" v-if="!filteredProducts.length">
+            <div class="text-center">
+              Товары не найдены. Попробуйте изменить критерии поиска
+            </div>
+          </v-col>
           <v-col
             v-for="(product, i) in filteredProducts"
             :key="i"
@@ -110,6 +115,13 @@
                 >
               </v-card-actions>
             </v-card>
+          </v-col>
+        </v-row>
+        <v-row v-if="!filteredProducts.length && !grid">
+          <v-col cols="12">
+            <div class="text-center">
+              Товары не найдены. Попробуйте изменить критерии поиска
+            </div>
           </v-col>
         </v-row>
         <v-row
