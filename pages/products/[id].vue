@@ -7,7 +7,7 @@
     </v-row>
     <v-card class="px-3 py-5">
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" sm="6">
           <v-img :src="product.image" height="400px" cover>
             <template v-slot:placeholder>
               <v-row align="center" class="fill-height ma-0" justify="center">
@@ -19,7 +19,7 @@
             </template>
           </v-img>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="12" sm="6">
           <div class="d-flex justify-space-between">
             <div class="mb-4">
               <div class="mb-1">
