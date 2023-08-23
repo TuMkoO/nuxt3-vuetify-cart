@@ -1,6 +1,24 @@
-# Nuxt 3 Minimal Starter
+# Nuxt3-Vuetify-Cart
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Shopping Cart - данное приложение представляет из себя каталог товаров интернет-магазина с возможностью добавления и удаления их в корзину. В приложении также реализована фильтрация товаров, а также возможность смены темы (ночная и дневная). Реализована адаптивность.
+
+**Использованные технологии:**  
+:small_orange_diamond: Nuxt 3  
+:small_orange_diamond: Vuetify  
+:small_orange_diamond: Pinia
+:small_orange_diamond: Typescript
+
+---
+
+### Live demo: https://nuxt-cart.vercel.app
+
+Возможности приложения:
+
+- фильтрация товаров
+- добавление/удаление товаров в корзину
+- работа с корзиной (увеличение/уменьшение количества товаров, полное удаление)
+- смена темы (ночная и дневная)
+- адаптивность под мобильные устройства
 
 ## Setup
 
@@ -46,18 +64,3 @@ pnpm run build
 # yarn
 yarn build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
