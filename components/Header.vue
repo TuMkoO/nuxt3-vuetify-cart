@@ -5,9 +5,14 @@
     >
     <v-spacer class="d-none d-sm-block"></v-spacer>
     <v-btn @click="$router.push('/cart')" class="text-none" stacked>
-      <v-badge :content="cartStore.productsTotal" color="error">
+      <v-badge
+        :content="cartStore.productsTotal"
+        color="error"
+        v-if="!cartStore.loader"
+      >
         <v-icon>mdi-cart-outline</v-icon>
       </v-badge>
+      <v-icon v-else>mdi-cart-outline</v-icon>
     </v-btn>
     <v-btn
       class="d-none d-md-flex"

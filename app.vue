@@ -9,8 +9,19 @@
 <script setup lang="ts">
 import { useCartStore } from "./stores/cart";
 
+const cartStore = useCartStore();
+
+onMounted(() => {
+  const cart = localStorage.getItem("cart");
+
+  if (cart && Object.keys(JSON.parse(cart)).length) {
+    cartStore.cartContent = JSON.parse(cart);
+  }
+
+  cartStore.loader = false;
+});
+
 useHead({
-  // title: "My App",
   titleTemplate: "%s - Site Title",
   meta: [{ name: "description", content: "My amazing site." }],
   bodyAttrs: {

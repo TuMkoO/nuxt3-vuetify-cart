@@ -55,7 +55,7 @@
                 ${{ product.price }}
               </div>
               <div>
-                <v-btn class="bg-primary" @click="cartStore.add(product.id)"
+                <v-btn class="bg-primary" @click="addToCart(product.id)"
                   >Add to cart</v-btn
                 >
               </div>
@@ -89,6 +89,12 @@ const product = computed(() => {
     return product.id === route.params.id;
   })[0];
 });
+
+function addToCart(id: string) {
+  cartStore.add(id);
+
+  localStorage.setItem("cart", JSON.stringify(cartStore.cartContent));
+}
 
 useHead({
   title:

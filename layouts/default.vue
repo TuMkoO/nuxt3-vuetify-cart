@@ -12,4 +12,8 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.v-main {
+  padding-top: 64px !important;
+}
+</style>

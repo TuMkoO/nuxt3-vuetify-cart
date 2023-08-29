@@ -1,6 +1,9 @@
 <template>
   <div class="py-6">
-    <v-row :class="{ 'justify-center': !cartStore.formattedCart.length }">
+    <v-row
+      v-if="!cartStore.loader"
+      :class="{ 'justify-center': !cartStore.formattedCart.length }"
+    >
       <v-col cols="12" :md="cartStore.formattedCart.length ? 8 : 6">
         <v-card class="py-2 py-sm-5 px-0 px-sm-4">
           <v-card-title>My Cart</v-card-title>
@@ -34,7 +37,7 @@
                       <span
                         class="icon d-flex align-center pa-3"
                         style="cursor: pointer"
-                        @click="cartStore.add(item.id)"
+                        @click="addToCart(item.id)"
                       >
                         <v-icon>mdi-plus</v-icon>
                       </span>
@@ -44,7 +47,7 @@
                       <span
                         class="icon d-flex align-center pa-3"
                         style="cursor: pointer"
-                        @click="cartStore.remove(item.id)"
+                        @click="removeFromCart(item.id)"
                       >
                         <v-icon>mdi-minus</v-icon>
                       </span>
@@ -53,7 +56,7 @@
                       {{ item.quantity }} X {{ item.price }} =
                       <strong>{{ item.cost }}</strong>
                     </p>
-                    <v-btn @click="cartStore.removeProduct(item.id)" icon>
+                    <v-btn @click="removeProductFromCart(item.id)" icon>
                       <v-icon color="red">mdi-delete</v-icon>
                     </v-btn>
                   </div>
@@ -101,6 +104,24 @@
 import { useCartStore } from "../stores/cart";
 
 const cartStore = useCartStore();
+
+function addToCart(id: string) {
+  cartStore.add(id);
+
+  localStorage.setItem("cart", JSON.stringify(cartStore.cartContent));
+}
+
+function removeFromCart(id: string) {
+  cartStore.remove(id);
+
+  localStorage.setItem("cart", JSON.stringify(cartStore.cartContent));
+}
+
+function removeProductFromCart(id: string) {
+  cartStore.removeProduct(id);
+
+  localStorage.setItem("cart", JSON.stringify(cartStore.cartContent));
+}
 
 definePageMeta({
   layout: "default",

@@ -110,7 +110,7 @@
                   >Read more</v-btn
                 >
                 <v-spacer></v-spacer>
-                <v-btn class="bg-primary" @click="cartStore.add(product.id)"
+                <v-btn class="bg-primary" @click="addToCart(product.id)"
                   >Add to cart</v-btn
                 >
               </v-card-actions>
@@ -269,6 +269,12 @@ const filteredProducts = computed(() => {
       return true;
     });
 });
+
+function addToCart(id: string) {
+  cartStore.add(id);
+
+  localStorage.setItem("cart", JSON.stringify(cartStore.cartContent));
+}
 
 function generateUniqueField(field: string) {
   const newArr: Array<string> = [];

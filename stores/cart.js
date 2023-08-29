@@ -5,6 +5,7 @@ export const useCartStore = defineStore("cart", {
   state: () => ({
     cartContent: {},
     theme: "light",
+    loader: true,
   }),
   actions: {
     add(productId) {
